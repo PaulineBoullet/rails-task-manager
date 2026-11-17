@@ -1,0 +1,20 @@
+<h1> Créer une tâche </h1>
+
+<%= form_with model: @task do |f| %>
+  <div>
+    <%= f.label :Titre %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :Détails %>
+    <%= f.text_field :details %>
+  </div>
+  <div>
+    <%= f.label :Réalisé %>
+    <%= f.checkbox :completed %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "retour aux tâches", tasks_path %>
